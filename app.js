@@ -35,9 +35,12 @@ app.get("/compose",function(req,res){
 });
 
 app.post("/compose",function(req,res){
-  var entry = (req.body.entry);
-  console.log(entry);
-})
+  const post={
+    title : (req.body.PostTitle),
+    body : (req.body.PostBody)
+  };
+  console.log(post);
+});
 
 app.post("/",function(req,res){
   res.send(homeStartingContent);
