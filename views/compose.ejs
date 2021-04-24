@@ -4,8 +4,18 @@
 
 <form class="" action="/Compose" method="post">
 
-  <input type="text" name="entry" value="">
-  <button type="submit" name="button">Publish</button>
+  <div class="form-group">
+    <label for="InputTitle">Title</label>
+    <input class="form-control" type="text" name="PostTitle" id="InputTitle" value="">
+  </div>
+
+  <div class="form-group">
+    <label for="titleEntry">Post</label>
+    <textarea class="form-control" type="text" name="PostBody" id="titleEntry" value="" rows="5" cols="30" ></textarea>
+  </div>
+
+
+  <button class="btn btn-primary" type="submit" name="button">Publish</button>
 
 </form>
 
