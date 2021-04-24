@@ -34,6 +34,11 @@ app.get("/compose",function(req,res){
   res.render("compose");
 });
 
+app.post("/compose",function(req,res){
+  var entry = (req.body.entry);
+  console.log(entry);
+})
+
 app.post("/",function(req,res){
   res.send(homeStartingContent);
 });
