@@ -59,11 +59,11 @@ app.get("/posts/:postID",function(req,res){
 
   posts.forEach(function(post){
   const storedTitle = _.lowerCase(post.title) ;
+  // const storedBody = (post.body);
 
     if (reqTitle === (storedTitle)){
-      console.log("Match Found");
-    }else{
-      console.log("lol");
+      res.render("post",{title:storedTitle ,
+         content: post.body});
     }
   });
 
