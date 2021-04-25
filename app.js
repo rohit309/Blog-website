@@ -51,6 +51,24 @@ app.post("/compose",function(req,res){
   res.redirect("/");
 });
 
+
+app.get("/posts/:postID",function(req,res){
+
+  const reqTitle = (req.params.postID) ;
+
+  posts.forEach(function(post){
+  const storedTitle = post.title ;
+
+    if (reqTitle === (storedTitle)){
+      console.log("Match Found");
+    }else{
+      console.log("lol");
+    }
+  });
+
+});
+
+
 app.post("/",function(req,res){
   res.send(homeStartingContent);
 });
