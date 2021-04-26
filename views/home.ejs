@@ -5,10 +5,13 @@
 
 <% posts.forEach(function(post){ %>
 
-  <% post.body = (post.body).substring(0,100) + "..."; %> 
+  <% post.body = (post.body).substring(0,100) + "..."; %>
 
   <h1><%= post.title %></h1>
-  <p><%= post.body %></p>
+  <p>
+    <%= post.body %>
+    <a href="/posts/<%= post.title %>">Read More</a>
+  </p>
 
 <% }); %>
 
